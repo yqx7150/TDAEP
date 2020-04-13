@@ -4,14 +4,25 @@ Transformed Denoising Autoencoder Prior for Image Restoration
 # Motivation
 Image restoration problem is usually ill-posed, which can be alleviated by learning image prior. Inspired by considerable performance of utilizing priors in pixel domain and wavelet domain jointly, we propose a novel transformed denoising autoencoder as prior (TDAEP). The core idea behind TDAEP is to enhance the classical denoising autoencoder (DAE) via transform domain, which captures complementary information from multiple views. Specifically, 1-level nonorthogonal wavelet coefficients are used to form 4-channel feature images. Moreover, a 5-channel tensor is obtained by stacking the original image under the pixel domain and 4-channel feature images under the wavelet domain. Then we train the transformed DAE (TDAE) with the 5-channel tensor as network input. The optimized image prior is obtained based on the trained autoencoder, and incorporated into an iterative restoration procedure with the aid of the auxiliary variable technique. The resulting model is addressed by proximal gradient descent technique. Numerous experiments demonstrated that TDAEP outperforms a set of image restoration benchmark algorithms.
 # Figs
-![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
-Fig. 1. 
-![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
-Fig. 2. 
-![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
-Fig. 3. 
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/flowchart_5-channel%20tensor.png)
+Fig. 1. Flowchart of the formation process of 5-channel tensor in transform domain.
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/network%20architecture.png)
+Fig. 2. Flowchart of the network architecture in training procedure of TDAEP.
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/iteration.png)
+Fig. 3. Visual illustration of TDAEP. Top: the training stage for learning priors. Bottom: the
+iterative restoration phase using the learned priors.
 # Table
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/Table1_Image%20Deblurring.PNG)
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/Table2_CS%20Recovery.PNG)
 # Visual Comparisons
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/fig10A_result_Image%20Deblurring.png)
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/fig10B_result_Image%20Deblurring.png)
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/fig10C_result_Image%20Deblurring.png)
+Fig. 4. Visual quality comparison of image deblurring.
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/fig13A_result_CS%20Recovery.png)
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master/Figs/fig13B_result_CS%20Recovery.png)
+Fig. 5. CS recovery results at 10% radial sampling.
+
 # Requirements and Dependencies
   MATLAB R2016b
   Cuda-9.0
@@ -23,10 +34,9 @@ Fig. 3.
   (https://pan.baidu.com/s/1Aa22avm0499VWq7kMvuoXA Password：sjuu)
   
 ## Image Deblurring
-'./DemoMRI/demo_MRI.m' is the demo of HF-DAEP for MRI reconstruction.
+'TDAEP/Image Deblurring/demo_TDAEPdeblur_5channel.m' is the demo of TDAEP for Image Deblurring.
 ## CT CS Recovery
-'./DemoCT/demo_CTRec.m' is the demo of HF-DAEP for CT reconstruction.
-'./DemoCT/ultilies/generateSystemMatrix.m' is used to generate the system matrix.
+'TDAEP/CS recovery/Demo_complexTDAEP5channel_nutrue_v1.m' is the demo of TDAEP for CS Recovery.
 ## Other Related Projects
   * Multi-Channel and Multi-Model-Based Autoencoding Prior for Grayscale Image Restoration  
 [<font size=5>**[Paper]**</font>](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8782831)   [<font size=5>**[Code]**</font>](https://github.com/yqx7150/MEDAEP)   [<font size=5>**[Slide]**</font>](https://github.com/yqx7150/EDAEPRec/tree/master/Slide)
