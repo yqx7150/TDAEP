@@ -4,12 +4,12 @@ Transformed Denoising Autoencoder Prior for Image Restoration
 # Motivation
 Image restoration problem is usually ill-posed, which can be alleviated by learning image prior. Inspired by considerable performance of utilizing priors in pixel domain and wavelet domain jointly, we propose a novel transformed denoising autoencoder as prior (TDAEP). The core idea behind TDAEP is to enhance the classical denoising autoencoder (DAE) via transform domain, which captures complementary information from multiple views. Specifically, 1-level nonorthogonal wavelet coefficients are used to form 4-channel feature images. Moreover, a 5-channel tensor is obtained by stacking the original image under the pixel domain and 4-channel feature images under the wavelet domain. Then we train the transformed DAE (TDAE) with the 5-channel tensor as network input. The optimized image prior is obtained based on the trained autoencoder, and incorporated into an iterative restoration procedure with the aid of the auxiliary variable technique. The resulting model is addressed by proximal gradient descent technique. Numerous experiments demonstrated that TDAEP outperforms a set of image restoration benchmark algorithms.
 # Figs
-![repeat-MWDMSP](https://github.com/yqx7150/MWDMSP/blob/master/test%20code/utils/flowchart.png)
-Fig. 1. Flow-chart of the network used in MWDMSP.
-![repeat-MWDMSP](https://github.com/yqx7150/MWDMSP/blob/master/test%20code/utils/flowchart.png)
-Fig. 1. Flow-chart of the network used in MWDMSP.
-![repeat-MWDMSP](https://github.com/yqx7150/MWDMSP/blob/master/test%20code/utils/flowchart.png)
-Fig. 1. Flow-chart of the network used in MWDMSP.
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
+Fig. 1. 
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
+Fig. 2. 
+![repeat-TDAEP](https://github.com/yqx7150/TDAEP/blob/master//Figs/flowchart_5-channel tensor.png)
+Fig. 3. 
 # Table
 # Visual Comparisons
 # Requirements and Dependencies
