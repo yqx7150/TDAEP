@@ -40,7 +40,7 @@ Fig. 5. CS recovery results at 10% radial sampling.
   
 ## Image Deblurring
 'TDAEP/Image Deblurring/demo_TDAEPdeblur_5channel.m' is the demo of TDAEP for Image Deblurring.
-## CT CS Recovery
+## CS Recovery
 'TDAEP/CS recovery/Demo_complexTDAEP5channel_nutrue_v1.m' is the demo of TDAEP for CS Recovery.
 ## Other Related Projects
   * Multi-Channel and Multi-Model-Based Autoencoding Prior for Grayscale Image Restoration  
